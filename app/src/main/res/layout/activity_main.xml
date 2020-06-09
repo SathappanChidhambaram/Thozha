@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainpage"
+    tools:context=".MainActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/bngo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/ngoi"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="12dp"
+        android:text="NGO LOGIN"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/agri"
+        app:layout_constraintEnd_toEndOf="@+id/ngo"
+        app:layout_constraintStart_toStartOf="@+id/ngo"
+        app:layout_constraintTop_toBottomOf="@+id/ngo"
+        android:onClick="ngof"/>
+
+    <Button
+        android:id="@+id/bheal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/iconi"
+        android:text="Health"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textColor="#fff000"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/edu"
+        app:layout_constraintStart_toEndOf="@+id/bngo"
+        app:layout_constraintStart_toStartOf="@+id/heal"
+        app:layout_constraintEnd_toEndOf="@+id/heal"
+        app:layout_constraintTop_toBottomOf="@+id/heal"
+        android:onClick="healf"
+        />
+
+    <Button
+        android:id="@+id/bedu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/iconi"
+        android:text="Education"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textColor="#fff000"
+        app:layout_constraintEnd_toEndOf="@+id/edu"
+        app:layout_constraintStart_toStartOf="@+id/edu"
+        app:layout_constraintTop_toBottomOf="@+id/edu"
+        android:onClick="eduf"/>
+
+    <Button
+        android:id="@+id/bagri"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/iconi"
+        android:text="Agriculture"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textColor="#fff000"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/agri"
+        app:layout_constraintBottom_toTopOf="@+id/awa"
+        app:layout_constraintStart_toStartOf="@+id/agri"
+        app:layout_constraintEnd_toEndOf="@+id/agri"
+        android:onClick="agrif"/>
+
+    <Button
+        android:id="@+id/bawa"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/iconi"
+        android:text="Awareness"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textColor="#fff000"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/awa"
+        app:layout_constraintEnd_toEndOf="@+id/awa"
+        app:layout_constraintStart_toStartOf="@+id/awa"
+        android:onClick="awaf"/>
+
+    <ImageView
+        android:id="@+id/heal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription=""
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bheal"
+        app:layout_constraintStart_toEndOf="@+id/ngo"
+       android:layout_marginLeft="80dp"
+        app:srcCompat="@drawable/he"
+        android:onClick="healf"/>
+
+    <ImageView
+        android:id="@+id/edu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:layout_marginLeft="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/bedu"
+        app:layout_constraintStart_toEndOf="@+id/agri"
+        app:layout_constraintTop_toBottomOf="@+id/bheal"
+        app:srcCompat="@drawable/ed"
+        android:onClick="eduf"/>
+
+    <ImageView
+        android:id="@+id/agri"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/bagri"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bngo"
+        app:srcCompat="@drawable/ag"
+        android:onClick="agrif"/>
+
+    <ImageView
+        android:id="@+id/awa"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/bawa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bagri"
+        app:srcCompat="@drawable/aw"
+        android:onClick="awaf"/>
+
+    <ImageView
+        android:id="@+id/ngo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/nn"
+        app:layout_constraintBottom_toTopOf="@+id/bngo"
+        app:layout_constraintEnd_toStartOf="@+id/heal"
+        android:onClick="ngof"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
